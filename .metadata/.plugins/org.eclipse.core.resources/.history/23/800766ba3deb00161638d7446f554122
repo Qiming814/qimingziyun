@@ -33,6 +33,7 @@ public class Register extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		String userName = request.getParameter("userName");
 		String password = request.getParameter("password");
+		String password2 = request.getParameter("password2");
 		
 		/* The users.properties file is stored in the "WEB-INF" folder.
 		   To access this file, you will need its absolute path. */
@@ -54,22 +55,22 @@ public class Register extends HttpServlet {
 		 */
 		
 		Properties p = new Properties();
-		Users user=new Users(userName,password); 
 		
 		FileInputStream fis = null;
 		
 		try {		
-			if(checkUser(user,propFilePath)){ 
-		        response.sendRedirect("Register.jsp"); 
-		      } 
-		      else{ 
+			
+			if(password.equals(password2)){ //confirmation password match
 				fis = new FileInputStream(propFilePath);
 				p.load(fis);
 				
 				p.setProperty(userName, password);
 				p.store(new FileOutputStream(propFilePath), null);
-				response.sendRedirect("Login.jsp");  
-		      }
+				response.sendRedirect("Login.jsp"); // Link-redirection
+			}
+			else{
+				response.sendRedirect("Register.jsp"); //if not match, jump back to Register page
+			}
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -97,22 +98,5 @@ public class Register extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
-	  public boolean checkUser(Users User, String propFilePath) throws IOException{ 
-		     
-		  
-		    Properties p = new Properties(); 
-		    FileInputStream fis = null; 
-		     
-		    try { 
-		      fis = new FileInputStream(propFilePath); 
-		      p.load(fis); 
-		     
-		      if(p.containsKey(User.getUserName())){ 
-		        return true; 
-		      } 
-		    }catch(Exception e){ 
-		      e.printStackTrace(); 
-		    } 
-		    return false; 
-		  } 
+
 }
