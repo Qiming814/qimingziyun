@@ -11,7 +11,7 @@
 <h1>MVC Web Application Team15</h1>
 <h2> SearchResults page:)!</h2>
 
- <form action	=Product>
+
  Logout click here: <a href="Login.jsp"> Logout </a> <br>
 <table>
    <tr>
@@ -29,12 +29,17 @@
       <td>Fresh</td>
       <td>$38.00</td>
       <td><IMG SRC=Pics/fresh.jpg HEIGHT="100" WIDTH="80" BORDER="0"></td>
-      <td> <input type=submit value=ViewProduct name="View Product"></td>
+       <td> <form action="ViewProductDetails.jsp">
+     <input type=submit value="View Product">
+      </form>
+      </td>
    </tr>
 
 
+
+
+
  </table> 
- </form> 
 <!-- Navigation links --> 
 <a href="ManageOrder.jsp"> Manage Order </a> <br>
 

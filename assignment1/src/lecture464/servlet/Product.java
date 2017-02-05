@@ -37,6 +37,14 @@ public class Product extends HttpServlet {
 		else{
 		response.sendRedirect("ViewProductDetails.jsp");
 		}
+		
+		String addToCart = request.getParameter("AddToCart");
+		if(!(addToCart == null)){
+			response.sendRedirect("View&CheckoutShoppingCart.jsp");
+			}
+			else{
+				response.sendRedirect("View&CheckoutShoppingCart.jsp");
+			}
 	}
 
 	/**
