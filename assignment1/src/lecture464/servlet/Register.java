@@ -54,26 +54,22 @@ public class Register extends HttpServlet {
 		 */
 		
 		Properties p = new Properties();
-		Users user=new Users(userName,password);
-
+		Users user=new Users(userName,password); 
 		
 		FileInputStream fis = null;
 		
 		try {		
-			
-			if(checkUser(user,propFilePath)){
-				response.sendRedirect("Register.jsp");
-			}
-			else{
+			if(checkUser(user,propFilePath)){ 
+		        response.sendRedirect("Register.jsp"); 
+		      } 
+		      else{ 
 				fis = new FileInputStream(propFilePath);
 				p.load(fis);
 				
 				p.setProperty(userName, password);
 				p.store(new FileOutputStream(propFilePath), null);
-				response.sendRedirect("Login.jsp"); 
-			}
-			
-			
+				response.sendRedirect("Login.jsp");  
+		      }
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -82,6 +78,17 @@ public class Register extends HttpServlet {
 				fis.close();
 			}
 		}
+		
+		/*
+		// Registration via the Users object
+		Users aUser = new Users(userName, password);
+		
+		//First check whether the user already exists via methods from Users class
+		
+		// Register the Users object
+		aUser.registerUser(aUser, propFilePath);
+		response.sendRedirect("Login.jsp"); 	
+		*/	
 	}
 
 	/**
@@ -90,23 +97,22 @@ public class Register extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		doGet(request, response);
 	}
-
-	public boolean checkUser(Users User, String propFilePath) throws IOException{
-		
-
-		Properties p = new Properties();
-		FileInputStream fis = null;
-		
-		try {
-			fis = new FileInputStream(propFilePath);
-			p.load(fis);
-		
-			if(p.containsKey(User.getUserName())){
-				return true;
-			}
-		}catch(Exception e){
-			e.printStackTrace();
-		}
-		return false;
-	}
+	  public boolean checkUser(Users User, String propFilePath) throws IOException{ 
+		     
+		  
+		    Properties p = new Properties(); 
+		    FileInputStream fis = null; 
+		     
+		    try { 
+		      fis = new FileInputStream(propFilePath); 
+		      p.load(fis); 
+		     
+		      if(p.containsKey(User.getUserName())){ 
+		        return true; 
+		      } 
+		    }catch(Exception e){ 
+		      e.printStackTrace(); 
+		    } 
+		    return false; 
+		  } 
 }
