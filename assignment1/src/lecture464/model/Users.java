@@ -4,12 +4,6 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.ResultSet;
-import java.sql.Statement;
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Properties;
 
 
@@ -86,7 +80,6 @@ public class Users {
 		}
 		return false;
 	}
-	
 	
 	public void removeUser(Users bUser, String propFilePath) throws IOException{
 		Properties p = new Properties();

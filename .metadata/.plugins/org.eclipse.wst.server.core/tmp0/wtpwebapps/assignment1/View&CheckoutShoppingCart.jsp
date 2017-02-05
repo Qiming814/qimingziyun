@@ -46,7 +46,7 @@ Logout click here: <a href="Login.jsp"> Logout </a> <br>
 <br>
 <br>
  
-   <input type=submit value="Check Out" name="Check Out">
+   <input type=submit value="Check Out" name=checkOut>
  <br>
  <br> 
   </form>  

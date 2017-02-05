@@ -8,5 +8,16 @@
 </head>
 <body>
 
+<h1>MVC Web Application Team15</h1>
+<h2> Your order has been placed:)!</h2><br>
+Logout click here: <a href="Login.jsp"> Logout </a> <br>
+<br>
+
+<form action="CustomerHomePage.jsp">
+<input type=submit value="Home"> <br>
+</form>
+
+<!-- Navigation links --> 
+<a href="ViewOrders.jsp"> View Order </a> <br>
 </body>
 </html>

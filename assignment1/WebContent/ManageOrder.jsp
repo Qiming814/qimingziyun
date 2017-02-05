@@ -8,11 +8,19 @@
 
 <h1> MVC Web Application Team15</h1>
 <h2> This is the Manage Order Page!</h2>
-
+Logout click here: <a href="Login.jsp"> Logout </a> 
 
 
 </head>
 <body>
 
+
+
+<form action="CustomerHomePage.jsp">
+<input type=submit value="Home"> 
+</form>
+<form action="ViewOrders.jsp">
+<input type=submit value="View Orders"> 
+</form>
 </body>
 </html>
