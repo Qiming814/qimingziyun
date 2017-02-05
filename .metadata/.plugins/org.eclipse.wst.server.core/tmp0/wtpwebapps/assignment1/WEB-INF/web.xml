@@ -59,4 +59,14 @@
     <servlet-name>Product</servlet-name>
     <url-pattern>/Product</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>Customer</display-name>
+    <servlet-name>Customer</servlet-name>
+    <servlet-class>lecture464.servlet.Customer</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Customer</servlet-name>
+    <url-pattern>/Customer</url-pattern>
+  </servlet-mapping>
 </web-app>

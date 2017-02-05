@@ -39,10 +39,10 @@ Review date: <br>
 Rating out of 5 stars: <br>
 <br>
 
-<form action	=ProductDetails>
-<input type=submit name=AddToCart value="Add to Cart"> 
+<form action	=Product>
+<input type=submit name =AddToCart value="Add to Cart">
 <input type=submit name=Back value="Back"> 
-<input type=submit name=Back value="Home"> 
+<input type=submit name=Home value="Home"> 
 
 </form>
 <br>

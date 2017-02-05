@@ -1,2 +1,15 @@
 127.0.0.1 - - [04/Feb/2017:18:04:01 -0600] "GET / HTTP/1.1" 404 951
 0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:04:02 -0600] "GET /assignment1/Login.jsp HTTP/1.1" 200 584
+127.0.0.1 - - [04/Feb/2017:18:33:59 -0600] "GET / HTTP/1.1" 404 951
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:01 -0600] "GET /assignment1/Login.jsp HTTP/1.1" 200 584
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:07 -0600] "GET /assignment1/Login?userName=a&password=a HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:07 -0600] "GET /assignment1/Register.jsp HTTP/1.1" 200 623
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:10 -0600] "GET /assignment1/Register?userName=aaa&password=aaa&password2=aaa HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:10 -0600] "GET /assignment1/Login.jsp HTTP/1.1" 200 584
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:12 -0600] "GET /assignment1/Login?userName=aaa&password=aaa HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:12 -0600] "GET /assignment1/CustomerHomePage.jsp HTTP/1.1" 200 838
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:15 -0600] "GET /assignment1/Search?searchInput=&Categories=Makeup HTTP/1.1" 302 -
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:15 -0600] "GET /assignment1/ProductSearchResults.jsp HTTP/1.1" 200 1012
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:15 -0600] "GET /assignment1/Pics/fresh.jpg HTTP/1.1" 200 82823
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:16 -0600] "GET /assignment1/ViewProductDetails.jsp? HTTP/1.1" 200 1014
+0:0:0:0:0:0:0:1 - - [04/Feb/2017:18:34:19 -0600] "GET /assignment1/Product?Back=Back HTTP/1.1" 500 1703
